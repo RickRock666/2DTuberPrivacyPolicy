@@ -1,0 +1,1273 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad — 2DTuber</title>
+<meta name="description" content="Política de privacidad de 2DTuber para Android: micrófono, imágenes de avatar, grabación de pantalla, overlay, OBS, anuncios y compras.">
+<meta name="theme-color" content="#24135c">
+<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NCA2NCc+PHJlY3Qgd2lkdGg9JzY0JyBoZWlnaHQ9JzY0JyByeD0nMTQnIGZpbGw9JyM2ZDRhZmYnLz48dGV4dCB4PSczMicgeT0nNDMnIGZvbnQtZmFtaWx5PSdBcmlhbCxzYW5zLXNlcmlmJyBmb250LXNpemU9JzI4JyBmb250LXdlaWdodD0nNzAwJyB0ZXh0LWFuY2hvcj0nbWlkZGxlJyBmaWxsPScjZmZmJz4yRDwvdGV4dD48L3N2Zz4=">
+<meta property="og:title" content="Política de Privacidad — 2DTuber">
+<meta property="og:description" content="Qué datos trata 2DTuber, para qué, dónde se guardan y qué opciones tienes.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #f6f7fb;
+    --surface: #ffffff;
+    --surface-2: #f0f2f8;
+    --text: #161a2b;
+    --muted: #5b6478;
+    --line: #dfe3ee;
+    --brand: #6d4aff;
+    --brand-2: #00a99b;
+    --brand-ink: #3b1fd1;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(20, 25, 50, .06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --bg: #0b0e17;
+      --surface: #121725;
+      --surface-2: #171e30;
+      --text: #e9ecf6;
+      --muted: #a3adc4;
+      --line: #26304a;
+      --brand: #9b86ff;
+      --brand-2: #3ee0cf;
+      --brand-ink: #c9bcff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: var(--brand-ink);
+    text-decoration-thickness: .08em;
+    text-underline-offset: .18em;
+  }
+  a:hover { text-decoration-thickness: .14em; }
+
+  :focus-visible {
+    outline: 3px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  [hidden] { display: none !important; }
+
+  .wrap {
+    width: min(1120px, calc(100% - 2.5rem));
+    margin-inline: auto;
+  }
+
+  /* Header */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 3.25rem 0 2.75rem;
+    color: #fff;
+    background:
+      radial-gradient(1100px 520px at 88% -18%, rgba(62, 224, 207, .30), transparent 62%),
+      linear-gradient(135deg, #1b1040 0%, #3a20a8 55%, #0b7f7a 100%);
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .28;
+    background-image: radial-gradient(rgba(255, 255, 255, .16) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .hero .wrap { position: relative; z-index: 1; }
+
+  .topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    font-weight: 750;
+    letter-spacing: .02em;
+    font-size: 1.05rem;
+  }
+  .logo {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ffffff, #cdc4ff);
+    color: #2a146e;
+    font-weight: 900;
+    font-size: 1.02rem;
+    letter-spacing: -.04em;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .22);
+  }
+
+  .lang-switch {
+    display: inline-flex;
+    padding: 3px;
+    gap: 3px;
+    border: 1px solid rgba(255, 255, 255, .28);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .10);
+    backdrop-filter: blur(8px);
+  }
+  .lang-switch button {
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    border-radius: 999px;
+    padding: .42rem .8rem;
+    background: transparent;
+    color: rgba(255, 255, 255, .82);
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 650;
+    line-height: 1;
+  }
+  .lang-switch button:hover { color: #fff; background: rgba(255, 255, 255, .12); }
+  .lang-switch button[aria-pressed="true"] {
+    color: #24135c;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
+  }
+
+  .eyebrow {
+    margin: 2.3rem 0 .35rem;
+    font-size: .78rem;
+    font-weight: 750;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .72);
+  }
+  .hero-sub {
+    max-width: 62ch;
+    margin: 0;
+    font-size: 1.08rem;
+    color: rgba(255, 255, 255, .92);
+  }
+
+  /* Page */
+  main { padding: 2.5rem 0 4rem; }
+
+  .page-head { margin-bottom: 1.5rem; }
+  .kicker {
+    margin: 0 0 .35rem;
+    font-size: .78rem;
+    font-weight: 750;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--brand-ink);
+  }
+  h1 {
+    margin: 0 0 .75rem;
+    font-size: clamp(2rem, 4.5vw, 2.9rem);
+    line-height: 1.12;
+    letter-spacing: -.035em;
+  }
+  .lead {
+    max-width: 72ch;
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.06rem;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-top: 1.1rem;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .34rem .68rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: .78rem;
+    line-height: 1.3;
+  }
+
+  .callout {
+    margin: 1.5rem 0 2rem;
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--brand);
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(109, 74, 255, .07), rgba(0, 169, 155, .07));
+  }
+  .callout strong {
+    display: block;
+    margin-bottom: .4rem;
+    font-size: .95rem;
+  }
+  .callout ul {
+    margin: .25rem 0 0;
+    padding-left: 1.2rem;
+  }
+  .callout li { margin: .32rem 0; }
+  .callout li::marker { color: var(--brand-2); }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .toc {
+    position: sticky;
+    top: 1.25rem;
+    align-self: start;
+    padding: 1rem 1.05rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+  .toc-title {
+    margin: 0 0 .45rem;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .toc li { margin: .08rem 0; }
+  .toc a {
+    display: block;
+    padding: .28rem .38rem;
+    border-radius: 7px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: .86rem;
+    line-height: 1.35;
+  }
+  .toc a:hover {
+    color: var(--text);
+    background: var(--surface-2);
+  }
+
+  .content { min-width: 0; }
+  .content section { scroll-margin-top: 1.5rem; }
+  .content h2 {
+    margin: 2.4rem 0 .65rem;
+    padding-top: .2rem;
+    font-size: 1.34rem;
+    line-height: 1.3;
+    letter-spacing: -.015em;
+  }
+  .content section:first-child h2 { margin-top: 0; }
+  .content h3 {
+    margin: 1.5rem 0 .4rem;
+    font-size: 1.04rem;
+    line-height: 1.35;
+  }
+  .content p { margin: .72rem 0; }
+  .content ul, .content ol {
+    margin: .7rem 0;
+    padding-left: 1.25rem;
+  }
+  .content li { margin: .34rem 0; }
+  .content li::marker { color: var(--brand-2); }
+  .content strong { font-weight: 700; }
+
+  code {
+    padding: .1em .35em;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--surface-2);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: .86em;
+    overflow-wrap: anywhere;
+  }
+
+  .table-wrap {
+    margin: 1rem 0 1.25rem;
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+    -webkit-overflow-scrolling: touch;
+  }
+  table {
+    width: 100%;
+    min-width: 660px;
+    border-collapse: collapse;
+    font-size: .91rem;
+  }
+  th, td {
+    padding: .72rem .85rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    background: var(--surface-2);
+    color: var(--muted);
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+  tbody tr:last-child td { border-bottom: 0; }
+  td { color: var(--text); }
+
+  .note {
+    padding: .9rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+
+  .contact {
+    margin-top: 1rem;
+    padding: 1.25rem 1.35rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+  .contact p { margin: .4rem 0; }
+
+  .footer {
+    padding: 1.5rem 0 2rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .82rem;
+  }
+  .footer p { margin: .25rem 0; }
+
+  @media (max-width: 920px) {
+    .layout { grid-template-columns: 1fr; gap: 1.5rem; }
+    .toc { position: static; }
+    .toc ol { columns: 2; column-gap: 1.5rem; }
+    .toc li { break-inside: avoid; }
+  }
+
+  @media (max-width: 620px) {
+    .hero { padding: 2.25rem 0 2rem; }
+    .topline { align-items: flex-start; flex-direction: column; }
+    .eyebrow { margin-top: 1.7rem; }
+    .hero-sub { font-size: .98rem; }
+    main { padding-top: 1.9rem; }
+    .toc ol { columns: 1; }
+    .meta { gap: .4rem; }
+    .table-wrap { border-radius: 10px; }
+  }
+
+  @media print {
+    .hero { color: #000; background: none; padding: 0 0 1rem; }
+    .hero::after, .lang-switch, .toc { display: none !important; }
+    body { background: #fff; color: #000; font-size: 11pt; }
+    .wrap { width: 100%; }
+    .layout { display: block; }
+    .callout, .contact, .table-wrap { box-shadow: none; }
+    a { color: #000; }
+    .content section { break-inside: avoid; }
+  }
+</style>
+<noscript>
+  <style>
+    [data-lang="en"][hidden] { display: block !important; }
+  </style>
+</noscript>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="topline">
+        <div class="brand">
+          <span class="logo" aria-hidden="true">2D</span>
+          <span>2DTuber</span>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang-btn="es" aria-pressed="true">Español</button>
+          <button type="button" data-lang-btn="en" aria-pressed="false">English</button>
+        </div>
+      </div>
+      <p class="eyebrow">Privacidad · Privacy</p>
+      <p class="hero-sub" data-lang="es">Política de privacidad de la app 2DTuber para Android.</p>
+      <p class="hero-sub" data-lang="en" lang="en" hidden>Privacy policy for the 2DTuber Android app.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- ============================= ESPAÑOL ============================= -->
+    <section class="lang-block" data-lang="es" lang="es">
+      <div class="page-head">
+        <p class="kicker">Documento legal</p>
+        <h1>Política de Privacidad</h1>
+        <p class="lead">Esta política explica qué información trata 2DTuber, para qué la usa, dónde se guarda y qué opciones tienes. Se aplica a la app Android <strong>2DTuber</strong> (paquete <code>com.rickrock666.twodtuber</code>), publicada en Google Play por <strong>Omar Alba</strong>.</p>
+        <div class="meta">
+          <span class="chip">App: 2DTuber</span>
+          <span class="chip">Paquete: com.rickrock666.twodtuber</span>
+          <span class="chip">Última actualización: 17 de noviembre de 2026</span>
+          <span class="chip">Versión de la política: 1.0</span>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>En resumen</strong>
+        <ul>
+          <li>2DTuber funciona en tu dispositivo. No hay cuentas, inicio de sesión ni servidores propios del desarrollador.</li>
+          <li>El micrófono se usa para mover la boca del avatar en tiempo real. Solo se guarda si tú grabas un video con audio.</li>
+          <li>Las imágenes que eliges se copian a la carpeta privada de la app y no se suben a internet.</li>
+          <li>Las grabaciones se guardan en tu almacenamiento (Descargas/2DTuber) o en la carpeta que elijas. Tú controlas cuándo grabar y cuándo borrar.</li>
+          <li>El avatar flotante se dibuja sobre otras apps, pero no lee ni captura lo que muestran.</li>
+          <li>El modo OBS transmite el avatar solo dentro de tu red local y por HTTP; no envía audio.</li>
+          <li>Los anuncios los sirve Google AdMob, que puede usar tu identificador de publicidad y datos técnicos.</li>
+          <li>Las compras las procesa Google Play. La app solo guarda si compraste «Quitar anuncios».</li>
+          <li>No vendemos datos personales ni usamos rastreadores propios de analítica.</li>
+        </ul>
+      </div>
+
+      <div class="layout">
+        <nav class="toc" aria-label="Contenido">
+          <p class="toc-title">Contenido</p>
+          <ol>
+            <li><a href="#es-1">1. Responsable y alcance</a></li>
+            <li><a href="#es-2">2. Datos y dónde quedan</a></li>
+            <li><a href="#es-3">3. Micrófono</a></li>
+            <li><a href="#es-4">4. Imágenes y archivos</a></li>
+            <li><a href="#es-5">5. Grabación de pantalla</a></li>
+            <li><a href="#es-6">6. Avatar flotante</a></li>
+            <li><a href="#es-7">7. Modo OBS y red local</a></li>
+            <li><a href="#es-8">8. Anuncios y AdMob</a></li>
+            <li><a href="#es-9">9. Compras en Play Store</a></li>
+            <li><a href="#es-10">10. Actualizaciones</a></li>
+            <li><a href="#es-11">11. Permisos de Android</a></li>
+            <li><a href="#es-12">12. Terceros y transferencias</a></li>
+            <li><a href="#es-13">13. Conservación y seguridad</a></li>
+            <li><a href="#es-14">14. Tus derechos</a></li>
+            <li><a href="#es-15">15. Menores</a></li>
+            <li><a href="#es-16">16. Cambios</a></li>
+            <li><a href="#es-17">17. Contacto</a></li>
+          </ol>
+        </nav>
+
+        <div class="content">
+          <section id="es-1">
+            <h2>1. Responsable y alcance</h2>
+            <p>El responsable del tratamiento de los datos descritos en esta política es <strong>Omar Alba</strong>, desarrollador de la app <strong>2DTuber</strong> para Android (paquete <code>com.rickrock666.twodtuber</code>), distribuida en Google Play.</p>
+            <p>Esta política se aplica a la app y a esta página. No se aplica a servicios de terceros que la app utiliza o a los que puedes acceder desde ella, como Google AdMob, Google Play, GitHub, OBS Studio o los sitios que abras desde un anuncio. Esos servicios tienen sus propias políticas de privacidad.</p>
+            <p>La app no requiere crear una cuenta ni iniciar sesión.</p>
+          </section>
+
+          <section id="es-2">
+            <h2>2. Datos que trata la app y dónde quedan</h2>
+            <p>La app está diseñada para funcionar en tu dispositivo. El desarrollador no opera servidores propios ni recibe tus imágenes, audios, videos o ajustes. Esta tabla resume el flujo:</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Dato</th>
+                    <th>Para qué</th>
+                    <th>Dónde se procesa</th>
+                    <th>¿Se envía a terceros?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Imágenes PNG que eliges (avatar, fondo, frente)</td>
+                    <td>Mostrar tus capas personalizadas</td>
+                    <td>Almacenamiento privado de la app (<code>user://custom_textures</code>)</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>Voz capturada por el micrófono</td>
+                    <td>Medir el volumen y animar la boca</td>
+                    <td>En tu dispositivo, en memoria</td>
+                    <td>No, salvo que grabes: se incluye en el MP4</td>
+                  </tr>
+                  <tr>
+                    <td>Video de la pantalla</td>
+                    <td>Grabar el modo Grabación</td>
+                    <td>Galería/Descargas o carpeta elegida</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>Ajustes (posición, tamaño, umbrales, idioma, FPS)</td>
+                    <td>Recordar tu configuración</td>
+                    <td>Almacenamiento privado de la app</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>Token de OBS</td>
+                    <td>Proteger la URL local del stream</td>
+                    <td>Almacenamiento privado de la app</td>
+                    <td>Se muestra en la URL local que conectas a OBS; no se envía a internet</td>
+                  </tr>
+                  <tr>
+                    <td>Estado de compra «Quitar anuncios»</td>
+                    <td>Evitar anuncios tras la compra</td>
+                    <td>Almacenamiento privado de la app y Google Play</td>
+                    <td>Sí, a Google Play</td>
+                  </tr>
+                  <tr>
+                    <td>Identificador de publicidad y datos de anuncios</td>
+                    <td>Mostrar y medir anuncios</td>
+                    <td>Google AdMob (Google)</td>
+                    <td>Sí, a Google y sus socios</td>
+                  </tr>
+                  <tr>
+                    <td>Datos técnicos de la comprobación de actualizaciones</td>
+                    <td>Avisar de una versión nueva</td>
+                    <td>API pública de GitHub</td>
+                    <td>Sí, a GitHub</td>
+                  </tr>
+                  <tr>
+                    <td>Diagnósticos del SDK de anuncios</td>
+                    <td>Funcionamiento y prevención de fraude</td>
+                    <td>Google</td>
+                    <td>Sí, a Google</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>No solicitamos tu nombre, correo electrónico, teléfono, contactos, calendario, SMS, cámara, ubicación precisa ni acceso a tu cuenta de Google. La app no crea cuentas ni perfiles de usuario. Algunos terceros (Google y GitHub) pueden recibir datos técnicos como se explica en las secciones 8 a 10.</p>
+          </section>
+
+          <section id="es-3">
+            <h2>3. Micrófono</h2>
+            <p>La app solicita el permiso <code>RECORD_AUDIO</code> para capturar tu voz y animar el avatar (nivel de volumen, boca y umbrales). La captura se procesa en tu dispositivo en tiempo real y no se almacena por sí sola.</p>
+            <p>El micrófono se usa mientras la app o el avatar flotante están activos y tú has concedido el permiso. Android muestra su indicador de micrófono. Al cerrar el overlay o detener la grabación, la app libera el micrófono.</p>
+            <p>Si usas el modo Grabación, la app intenta incluir el audio del micrófono en el MP4. Si el dispositivo no permite compartir el micrófono o no concedes el permiso, el video se graba sin audio. El audio no se transmite por el modo OBS.</p>
+            <p>Si niegas el permiso, el avatar no reaccionará a tu voz; las demás funciones pueden seguir funcionando. Puedes revocar el permiso en Ajustes de Android.</p>
+            <p>El micrófono puede captar conversaciones de otras personas. Graba solo con su consentimiento y cumple las leyes aplicables.</p>
+          </section>
+
+          <section id="es-4">
+            <h2>4. Imágenes y archivos que eliges</h2>
+            <p>Para personalizar el avatar, el fondo o el frente, puedes elegir una imagen PNG con el selector de archivos de Android. La app copia una copia a su almacenamiento privado (<code>user://custom_textures</code>) y usa esa copia para dibujar la capa.</p>
+            <p>La app no explora ni enumera tu galería: solo recibe el archivo que tú seleccionas. El archivo original no se modifica. Las imágenes no se suben a internet ni se comparten con el desarrollador.</p>
+            <p>Eres responsable de tener los derechos necesarios sobre las imágenes que importas. No uses imágenes de terceros sin autorización.</p>
+            <p>Puedes cambiar una imagen desde la app, o borrar todas las copias borrando los datos de la app o desinstalándola.</p>
+            <p>Si eliges una carpeta para las grabaciones, Android te pedirá permiso para acceder a esa carpeta concreta (Storage Access Framework). La app guarda ese permiso para no pedírtelo cada vez y solo usa la carpeta elegida para escribir los videos. Puedes revocar el acceso desde Ajustes de Android.</p>
+          </section>
+
+          <section id="es-5">
+            <h2>5. Grabación de pantalla y videos</h2>
+            <p>El modo Grabación usa la API de captura de pantalla de Android (MediaProjection). Antes de empezar, Android muestra su propio aviso y te pide consentimiento. Si cancelas, no se graba nada.</p>
+            <p>Mientras grabas, la app captura la pantalla completa tal como la entrega Android, incluido lo que aparezca en ella (por ejemplo, notificaciones, mensajes o contenido de otras apps). La app no analiza el contenido ni lo envía a ningún servidor.</p>
+            <p>El video se codifica en MP4 (H.264) y, si el dispositivo lo permite, incluye audio del micrófono (AAC). No se captura el audio interno de otras apps.</p>
+            <p>Por defecto, el archivo se guarda en <code>Descargas/2DTuber</code> con el nombre <code>2dtuber.mp4</code> (o <code>2dtuber(2).mp4</code>, etc.). También puedes elegir otra carpeta con el selector de Android. La notificación de la grabación permite detenerla.</p>
+            <p>Los videos guardados en Descargas o en una carpeta que elijas permanecen en tu almacenamiento después de desinstalar la app; bórralos desde la galería o el administrador de archivos. La app no accede a otros archivos de esas carpetas.</p>
+            <p>No grabes información sensible ni a otras personas sin su consentimiento. Tú controlas qué se captura y dónde se guarda.</p>
+          </section>
+
+          <section id="es-6">
+            <h2>6. Avatar flotante (overlay)</h2>
+            <p>El modo flotante usa el permiso <code>SYSTEM_ALERT_WINDOW</code> para dibujar el avatar sobre otras apps. Android te lleva a una pantalla de ajustes para concederlo; puedes revocarlo cuando quieras.</p>
+            <p>El overlay crea una ventana propia con el avatar. No lee, captura ni modifica el contenido de otras apps, no usa servicios de accesibilidad y no recibe tus toques: los toques atraviesan el avatar.</p>
+            <p>El overlay se ejecuta como servicio en primer plano con una notificación fija que permite cerrarlo. Al cerrarlo, la app libera el micrófono y detiene el proceso. Mientras está activo, puede usar el micrófono para animar el avatar, igual que la app principal.</p>
+            <p>El avatar flotante puede quedar visible sobre apps sensibles. Actívalo solo cuando quieras y ciérralo cuando termines.</p>
+          </section>
+
+          <section id="es-7">
+            <h2>7. Modo OBS y red local</h2>
+            <p>El modo OBS inicia un servidor HTTP local en el puerto <code>8765</code> (o el siguiente disponible) para enviar el avatar a OBS Studio. El servidor escucha en las interfaces de red de tu dispositivo y usa un token en la URL para limitar el acceso.</p>
+            <p>La URL tiene la forma <code>http://&lt;IP-local&gt;:8765/?token=...</code>. Cualquier dispositivo en la misma red que conozca esa URL puede ver el stream del avatar. El stream es MJPEG, con el avatar sobre fondo verde y sin audio. La app lo sirve para tu red local y no lo envía a internet.</p>
+            <p>El modo OBS no envía el stream a servidores de internet ni al desarrollador. La URL usa HTTP, no HTTPS, así que no está cifrada en tu red. Usa una red Wi-Fi de confianza, no compartas la URL y detén el modo OBS cuando no lo uses.</p>
+            <p>El token se guarda en el almacenamiento privado de la app (<code>user://obs_token.txt</code>). Si alguien tiene acceso a los datos de la app o a tu dispositivo desbloqueado, podría leerlo.</p>
+            <p>OBS Studio y el equipo donde lo ejecutes son servicios de terceros; su uso se rige por sus propias políticas.</p>
+          </section>
+
+          <section id="es-8">
+            <h2>8. Anuncios y Google AdMob</h2>
+            <p>La app muestra anuncios interstitial (al comenzar) y rewarded (para iniciar el modo OBS) mediante el SDK de Google Mobile Ads / AdMob. Si compras <strong>Quitar anuncios</strong>, la app deja de solicitar y mostrar anuncios.</p>
+            <p>Google puede recopilar y tratar datos como: identificador de publicidad de Android (<code>AD_ID</code>), dirección IP, información del dispositivo y de la app (modelo, versión de Android, idioma, tamaño de pantalla, red), interacciones con los anuncios (impresiones, clics, visualizaciones), datos de diagnóstico y ubicación aproximada derivada de la IP. Google puede usar identificadores y tecnologías similares para personalizar anuncios, medirlos, limitar su frecuencia, prevenir fraude y cumplir obligaciones legales.</p>
+            <p>El desarrollador no recibe tu nombre, correo, número de teléfono ni datos de pago de Google. Recibe eventos técnicos de carga o visualización y reportes agregados. El desarrollador no vende datos personales ni crea perfiles publicitarios propios.</p>
+            <p>Puedes controlar la publicidad desde Android: <strong>Ajustes &gt; Privacidad &gt; Anuncios</strong> (restablecer o eliminar el ID de publicidad). También puedes gestionar la personalización en <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Mi Centro de Anuncios de Google</a> y consultar <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">cómo usa Google la información de apps que usan sus servicios</a>.</p>
+            <p>Google actúa como proveedor independiente. Su tratamiento se rige por la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a> y la <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">información sobre publicidad de Google</a>. Si compras Quitar anuncios, no se cargan nuevos anuncios; los datos que Google haya recibido antes de la compra se rigen por esas políticas.</p>
+          </section>
+
+          <section id="es-9">
+            <h2>9. Compras dentro de la app (Google Play Billing)</h2>
+            <p>La app ofrece una compra única para quitar anuncios (identificador <code>remove_ads</code>). No hay suscripciones.</p>
+            <p>Google Play procesa el pago, los impuestos, la facturación y los reembolsos. La app no recibe ni almacena tu número de tarjeta, dirección de facturación ni datos de pago. Recibe del SDK de Google Play Billing el estado de la compra y un token de compra, que usa para confirmar la compra con Google Play.</p>
+            <p>La app guarda localmente si la compra está activa (<code>user://purchases.cfg</code>) para no mostrar anuncios. Si reinstalas o borras los datos, la app vuelve a consultar tus compras en Google Play y restaura el derecho si la compra sigue vigente.</p>
+            <p>Los reembolsos y cancelaciones se gestionan en Google Play. La app no gestiona reembolsos directamente. Consulta los <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Términos de Servicio de Google Play</a> y la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de Privacidad de Google</a>.</p>
+            <p>El historial de compras y los datos de pago son tratados por Google. El desarrollador puede ver reportes agregados de ventas en Play Console, no tus datos de pago.</p>
+          </section>
+
+          <section id="es-10">
+            <h2>10. Comprobación de actualizaciones (GitHub)</h2>
+            <p>Al iniciar, la app consulta la API pública de GitHub para ver si hay una versión nueva: <code>https://api.github.com/repos/RickRock666/2DTuber_releases/releases/latest</code>. La solicitud incluye tu dirección IP, un identificador técnico de la app (<code>User-Agent: GodotUpdateChecker</code>) y la fecha y hora. GitHub devuelve información pública de la última versión.</p>
+            <p>La finalidad es mostrar un aviso de actualización. No se envía información de tu cuenta, tus imágenes, tu micrófono ni tus grabaciones. GitHub puede registrar la solicitud según su <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">Declaración de Privacidad</a>.</p>
+            <p>Si no hay conexión, la comprobación falla y la app sigue funcionando. El aviso puede enlazar a itch.io; al abrirlo, se aplican las políticas de ese sitio.</p>
+          </section>
+
+          <section id="es-11">
+            <h2>11. Permisos y controles de Android</h2>
+            <p>La app solo solicita los permisos que necesita para sus funciones. Puedes revisarlos y revocarlos en <strong>Ajustes &gt; Apps &gt; 2DTuber &gt; Permisos</strong>.</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Permiso o control</th>
+                    <th>Para qué</th>
+                    <th>Si lo niegas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>RECORD_AUDIO</code> (micrófono)</td>
+                    <td>Animar el avatar con tu voz; incluir audio en las grabaciones</td>
+                    <td>El avatar no reacciona; las grabaciones pueden ser sin audio</td>
+                  </tr>
+                  <tr>
+                    <td><code>SYSTEM_ALERT_WINDOW</code> (mostrar sobre otras apps)</td>
+                    <td>Avatar flotante</td>
+                    <td>No se puede usar el modo flotante</td>
+                  </tr>
+                  <tr>
+                    <td><code>POST_NOTIFICATIONS</code> (notificaciones)</td>
+                    <td>Notificación del servicio de overlay/grabación y botón de detener</td>
+                    <td>Android 13+: no verás esos controles; el servicio puede seguir activo</td>
+                  </tr>
+                  <tr>
+                    <td>Captura de pantalla (MediaProjection)</td>
+                    <td>Grabar la pantalla en el modo Grabación</td>
+                    <td>No se graba; puedes cancelar el aviso de Android</td>
+                  </tr>
+                  <tr>
+                    <td>Selector de fotos/archivos</td>
+                    <td>Elegir imágenes PNG y la carpeta de grabaciones</td>
+                    <td>No puedes importar imágenes ni cambiar la carpeta; la app sigue funcionando</td>
+                  </tr>
+                  <tr>
+                    <td><code>INTERNET</code> y <code>ACCESS_NETWORK_STATE</code></td>
+                    <td>Anuncios, compras, actualizaciones y red local</td>
+                    <td>Sin internet no hay anuncios ni compras; OBS local puede seguir funcionando si hay Wi-Fi</td>
+                  </tr>
+                  <tr>
+                    <td><code>com.android.vending.BILLING</code></td>
+                    <td>Compra «Quitar anuncios»</td>
+                    <td>No puedes comprar; la app funciona con anuncios</td>
+                  </tr>
+                  <tr>
+                    <td><code>AD_ID</code></td>
+                    <td>Identificador de publicidad para AdMob</td>
+                    <td>Android puede limitar la personalización; los anuncios siguen</td>
+                  </tr>
+                  <tr>
+                    <td><code>FOREGROUND_SERVICE</code> + tipos <code>MICROPHONE</code>, <code>MEDIA_PROJECTION</code>, <code>SPECIAL_USE</code></td>
+                    <td>Mantener el overlay y la grabación en primer plano</td>
+                    <td>Android no permite el servicio; no hay overlay ni grabación</td>
+                  </tr>
+                  <tr>
+                    <td><code>WAKE_LOCK</code></td>
+                    <td>Evitar que el dispositivo suspenda el servicio durante la grabación o el overlay</td>
+                    <td>Puede fallar la grabación o el overlay en segundo plano</td>
+                  </tr>
+                  <tr>
+                    <td><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code> (Android 9 o anterior)</td>
+                    <td>Leer y escribir archivos en versiones antiguas de Android</td>
+                    <td>En Android moderno se usan MediaStore y el selector; en versiones antiguas puede fallar el guardado</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">La app no solicita cámara, ubicación precisa, contactos, calendario, SMS, llamadas ni acceso a tu cuenta de Google. El SDK de anuncios declara permisos técnicos adicionales (por ejemplo, <code>ACCESS_NETWORK_STATE</code> y <code>READ_BASIC_PHONE_STATE</code>) para entregar anuncios y prevenir fraude; no se usan para acceder a tus llamadas ni a tu número.</p>
+          </section>
+
+          <section id="es-12">
+            <h2>12. Terceros y transferencias</h2>
+            <p>La app utiliza los siguientes servicios de terceros. Cada uno trata datos según su propia política:</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tercero</th>
+                    <th>Servicio</th>
+                    <th>Datos</th>
+                    <th>Política</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Google AdMob / Google Mobile Ads</td>
+                    <td>Anuncios</td>
+                    <td>ID de publicidad, IP, dispositivo, interacciones, diagnóstico</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacidad</a> · <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Anuncios</a></td>
+                  </tr>
+                  <tr>
+                    <td>Google Play Billing</td>
+                    <td>Compras</td>
+                    <td>Datos de pago e historial (Google); estado y token (app)</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacidad</a> · <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Términos</a></td>
+                  </tr>
+                  <tr>
+                    <td>GitHub</td>
+                    <td>Comprobación de versión</td>
+                    <td>IP, user agent, fecha y hora</td>
+                    <td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">Privacidad</a></td>
+                  </tr>
+                  <tr>
+                    <td>Android / Google Play (sistema)</td>
+                    <td>Permisos, captura, selector, notificaciones</td>
+                    <td>El contenido capturado o los archivos elegidos se quedan en el dispositivo</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacidad de Google</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>El desarrollador no vende datos personales. Tus imágenes, audios y videos no se envían a anunciantes ni a servidores del desarrollador; no hay servidores propios.</p>
+            <p>Algunos de estos proveedores pueden tratar datos fuera de tu país. Google y GitHub aplican sus propios mecanismos de transferencia internacional. El desarrollador no controla esas transferencias.</p>
+            <p>Los enlaces a sitios de terceros (por ejemplo, itch.io desde el aviso de actualización o un anuncio) se abren fuera de la app y se rigen por sus políticas.</p>
+          </section>
+
+          <section id="es-13">
+            <h2>13. Conservación y seguridad</h2>
+            <h3>Conservación</h3>
+            <ul>
+              <li>Ajustes, imágenes y token OBS: hasta que borres los datos de la app o la desinstales.</li>
+              <li>Estado de compra: hasta que borres los datos; se puede restaurar desde Google Play.</li>
+              <li>Videos guardados en Descargas o en una carpeta elegida: hasta que los borres tú; no se eliminan al desinstalar.</li>
+              <li>Datos de anuncios y de GitHub: según sus políticas.</li>
+            </ul>
+            <h3>Seguridad</h3>
+            <ul>
+              <li>La app no envía tus imágenes, audios o videos a servidores del desarrollador.</li>
+              <li>Android aísla los datos privados de la app; otras apps no pueden leerlos sin permisos del sistema.</li>
+              <li>Los videos en Descargas y las imágenes que compartas pueden ser accesibles para otras apps con acceso al almacenamiento. Protégelos.</li>
+              <li>El modo OBS usa HTTP sin cifrar en tu red local; usa una red de confianza y detén el servidor cuando no lo uses.</li>
+              <li>Ningún sistema es 100 % seguro. Si detectas un problema, contáctanos.</li>
+            </ul>
+          </section>
+
+          <section id="es-14">
+            <h2>14. Tus derechos y opciones</h2>
+            <p>Puedes:</p>
+            <ul>
+              <li>Acceder, corregir o eliminar los datos locales desde la app o desde Ajustes de Android (borrar datos o desinstalar).</li>
+              <li>Borrar tus videos desde la galería o el administrador de archivos.</li>
+              <li>Restablecer o eliminar tu ID de publicidad en Ajustes &gt; Privacidad &gt; Anuncios.</li>
+              <li>Gestionar la personalización de anuncios en Mi Centro de Anuncios de Google.</li>
+              <li>Contactarnos para cualquier duda o solicitud.</li>
+            </ul>
+            <p><strong>EEE, Reino Unido y Suiza:</strong> tienes derechos de acceso, rectificación, supresión, limitación, oposición, portabilidad y retirada del consentimiento, y puedes reclamar ante tu autoridad de protección de datos. La base legal para el tratamiento local es tu consentimiento (micrófono, captura y archivos) y el interés legítimo en el funcionamiento de la app. Para datos de Google, ejerce tus derechos ante Google; te ayudamos a dirigir la solicitud.</p>
+            <p><strong>México:</strong> puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición (ARCO) contactándonos.</p>
+            <p><strong>California:</strong> el desarrollador no vende datos personales; Google puede compartir datos para publicidad personalizada según su propia política. Puedes solicitar información sobre las categorías de datos tratados y ejercer tus derechos de acceso, eliminación y no discriminación contactándonos. Para datos de Google, usa las herramientas de Google.</p>
+            <p><strong>Brasil:</strong> puedes ejercer los derechos de la LGPD contactándonos.</p>
+            <p>Como la app no tiene cuentas, puede que no podamos identificarte; te pediremos la información mínima necesaria para atender la solicitud.</p>
+          </section>
+
+          <section id="es-15">
+            <h2>15. Menores</h2>
+            <p>2DTuber no está dirigida a menores de 13 años (o la edad mínima de consentimiento digital de tu país). No recopilamos conscientemente datos de menores. Los anuncios no están configurados como dirigidos a niños.</p>
+            <p>Si eres padre, madre o tutor y crees que un menor usó la app, contáctanos. Puedes borrar los datos locales borrando los datos de la app o desinstalándola, y borrar los videos de la galería.</p>
+            <p>Los menores deben usar la app con supervisión de un adulto, especialmente el micrófono, la captura de pantalla y la publicación de videos.</p>
+          </section>
+
+          <section id="es-16">
+            <h2>16. Cambios a esta política</h2>
+            <p>Podemos actualizar esta política para reflejar cambios en la app o en la ley. Publicaremos la versión nueva en esta página y cambiaremos la fecha de «Última actualización».</p>
+            <p>Si el cambio es importante, podemos avisarte en la app o en la ficha de Google Play. El uso continuado después de la publicación implica que aceptas la política actualizada, en la medida permitida por la ley.</p>
+          </section>
+
+          <section id="es-17">
+            <h2>17. Contacto</h2>
+            <p>Para preguntas, solicitudes de privacidad o reclamaciones, escribe a <strong>omar.alba.castillo@gmail.com</strong> con el asunto «Privacidad 2DTuber».</p>
+            <p>También puedes abrir un issue en el repositorio: <a href="https://github.com/RickRock666/2DTuber" target="_blank" rel="noopener noreferrer">github.com/RickRock666/2DTuber</a>.</p>
+            <p>Responderemos en un plazo razonable. Si estás en el EEE o el Reino Unido y no estás satisfecho, puedes presentar una reclamación ante tu autoridad de protección de datos.</p>
+            <div class="contact">
+              <h3>Datos de contacto</h3>
+              <p><strong>Responsable:</strong> Omar Alba</p>
+              <p><strong>Correo:</strong> <a href="mailto:omar.alba.castillo@gmail.com">omar.alba.castillo@gmail.com</a></p>
+              <p><strong>Repositorio:</strong> <a href="https://github.com/RickRock666/2DTuber" target="_blank" rel="noopener noreferrer">github.com/RickRock666/2DTuber</a></p>
+              <p><strong>App:</strong> 2DTuber (<code>com.rickrock666.twodtuber</code>)</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= ENGLISH ============================= -->
+    <section class="lang-block" data-lang="en" lang="en" hidden>
+      <div class="page-head">
+        <p class="kicker">Legal document</p>
+        <h1>Privacy Policy</h1>
+        <p class="lead">This policy explains what information 2DTuber processes, why, where it is stored, and what choices you have. It applies to the Android app <strong>2DTuber</strong> (package <code>com.rickrock666.twodtuber</code>), published on Google Play by <strong>Omar Alba</strong>.</p>
+        <div class="meta">
+          <span class="chip">App: 2DTuber</span>
+          <span class="chip">Package: com.rickrock666.twodtuber</span>
+          <span class="chip">Last updated: November 17, 2026</span>
+          <span class="chip">Policy version: 1.0</span>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>At a glance</strong>
+        <ul>
+          <li>2DTuber runs on your device. There are no accounts, sign-ins or developer-operated servers.</li>
+          <li>The microphone animates the avatar in real time. It is saved only if you record a video with audio.</li>
+          <li>Images you choose are copied to the app's private storage and are not uploaded.</li>
+          <li>Recordings are saved to your storage (Downloads/2DTuber) or a folder you choose. You control when to record and delete.</li>
+          <li>The floating avatar is drawn over other apps but does not read or capture their content.</li>
+          <li>OBS mode streams the avatar only on your local network over HTTP; it does not send audio.</li>
+          <li>Ads are served by Google AdMob, which may use your advertising ID and technical data.</li>
+          <li>Purchases are processed by Google Play. The app only stores whether you bought “Remove ads”.</li>
+          <li>We do not sell personal data or use our own analytics trackers.</li>
+        </ul>
+      </div>
+
+      <div class="layout">
+        <nav class="toc" aria-label="Contents">
+          <p class="toc-title">Contents</p>
+          <ol>
+            <li><a href="#en-1">1. Controller and scope</a></li>
+            <li><a href="#en-2">2. Data and where it stays</a></li>
+            <li><a href="#en-3">3. Microphone</a></li>
+            <li><a href="#en-4">4. Images and files</a></li>
+            <li><a href="#en-5">5. Screen recording</a></li>
+            <li><a href="#en-6">6. Floating avatar</a></li>
+            <li><a href="#en-7">7. OBS and local network</a></li>
+            <li><a href="#en-8">8. Ads and AdMob</a></li>
+            <li><a href="#en-9">9. Play Store purchases</a></li>
+            <li><a href="#en-10">10. Updates</a></li>
+            <li><a href="#en-11">11. Android permissions</a></li>
+            <li><a href="#en-12">12. Third parties</a></li>
+            <li><a href="#en-13">13. Retention and security</a></li>
+            <li><a href="#en-14">14. Your rights</a></li>
+            <li><a href="#en-15">15. Children</a></li>
+            <li><a href="#en-16">16. Changes</a></li>
+            <li><a href="#en-17">17. Contact</a></li>
+          </ol>
+        </nav>
+
+        <div class="content">
+          <section id="en-1">
+            <h2>1. Controller and scope</h2>
+            <p>The controller of the data described in this policy is <strong>Omar Alba</strong>, developer of the Android app <strong>2DTuber</strong> (package <code>com.rickrock666.twodtuber</code>), distributed on Google Play.</p>
+            <p>This policy applies to the app and this page. It does not apply to third-party services the app uses or that you can reach from it, such as Google AdMob, Google Play, GitHub, OBS Studio, or sites you open from an ad. Those services have their own privacy policies.</p>
+            <p>The app does not require an account or sign-in.</p>
+          </section>
+
+          <section id="en-2">
+            <h2>2. What data the app processes and where it stays</h2>
+            <p>The app is designed to run on your device. The developer does not operate its own servers and does not receive your images, audio, videos or settings. This table summarises the flow:</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Data</th>
+                    <th>Purpose</th>
+                    <th>Where it is processed</th>
+                    <th>Sent to third parties?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PNG images you choose (avatar, background, foreground)</td>
+                    <td>Display your custom layers</td>
+                    <td>App private storage (<code>user://custom_textures</code>)</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>Voice captured by the microphone</td>
+                    <td>Measure volume and animate the mouth</td>
+                    <td>On your device, in memory</td>
+                    <td>No, unless you record: it is included in the MP4</td>
+                  </tr>
+                  <tr>
+                    <td>Screen video</td>
+                    <td>Record the Recording mode</td>
+                    <td>Gallery/Downloads or chosen folder</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>Settings (position, size, thresholds, language, FPS)</td>
+                    <td>Remember your configuration</td>
+                    <td>App private storage</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td>OBS token</td>
+                    <td>Protect the local stream URL</td>
+                    <td>App private storage</td>
+                    <td>Shown in the local URL you connect to OBS; not sent to the internet</td>
+                  </tr>
+                  <tr>
+                    <td>“Remove ads” purchase status</td>
+                    <td>Avoid ads after purchase</td>
+                    <td>App private storage and Google Play</td>
+                    <td>Yes, to Google Play</td>
+                  </tr>
+                  <tr>
+                    <td>Advertising ID and ad data</td>
+                    <td>Serve and measure ads</td>
+                    <td>Google AdMob (Google)</td>
+                    <td>Yes, to Google and its partners</td>
+                  </tr>
+                  <tr>
+                    <td>Technical data for the update check</td>
+                    <td>Notify about a new version</td>
+                    <td>GitHub public API</td>
+                    <td>Yes, to GitHub</td>
+                  </tr>
+                  <tr>
+                    <td>Ad SDK diagnostics</td>
+                    <td>Operation and fraud prevention</td>
+                    <td>Google</td>
+                    <td>Yes, to Google</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>We do not request your name, email address, phone number, contacts, calendar, SMS, camera, precise location, or access to your Google account. The app does not create accounts or user profiles. Some third parties (Google and GitHub) may receive technical data as explained in sections 8 to 10.</p>
+          </section>
+
+          <section id="en-3">
+            <h2>3. Microphone</h2>
+            <p>The app requests the <code>RECORD_AUDIO</code> permission to capture your voice and animate the avatar (volume level, mouth and thresholds). Capture is processed on your device in real time and is not stored by itself.</p>
+            <p>The microphone is used while the app or the floating avatar is active and you have granted permission. Android shows its microphone indicator. When you close the overlay or stop recording, the app releases the microphone.</p>
+            <p>If you use Recording mode, the app tries to include microphone audio in the MP4. If the device does not allow the microphone to be shared or you do not grant permission, the video is recorded without audio. Audio is not transmitted in OBS mode.</p>
+            <p>If you deny permission, the avatar will not react to your voice; other features may still work. You can revoke the permission in Android Settings.</p>
+            <p>The microphone may capture other people's conversations. Record only with their consent and comply with applicable law.</p>
+          </section>
+
+          <section id="en-4">
+            <h2>4. Images and files you choose</h2>
+            <p>To customise the avatar, background or foreground, you can choose a PNG image with Android's file picker. The app copies it to its private storage (<code>user://custom_textures</code>) and uses that copy to draw the layer.</p>
+            <p>The app does not scan or enumerate your gallery: it only receives the file you select. The original file is not modified. Images are not uploaded to the internet or shared with the developer.</p>
+            <p>You are responsible for having the necessary rights to the images you import. Do not use third-party images without permission.</p>
+            <p>You can change an image from the app, or delete all copies by clearing the app's data or uninstalling it.</p>
+            <p>If you choose a folder for recordings, Android will ask for permission to access that specific folder (Storage Access Framework). The app stores that permission so it does not ask every time and only uses the chosen folder to write videos. You can revoke access in Android Settings.</p>
+          </section>
+
+          <section id="en-5">
+            <h2>5. Screen recording and videos</h2>
+            <p>Recording mode uses Android's screen capture API (MediaProjection). Before recording, Android shows its own notice and asks for your consent. If you cancel, nothing is recorded.</p>
+            <p>While recording, the app captures the full screen as provided by Android, including whatever appears on it (for example, notifications, messages or content from other apps). The app does not analyse the content or send it to any server.</p>
+            <p>The video is encoded as MP4 (H.264) and, if the device allows it, includes microphone audio (AAC). Internal audio from other apps is not captured.</p>
+            <p>By default, the file is saved to <code>Downloads/2DTuber</code> as <code>2dtuber.mp4</code> (or <code>2dtuber(2).mp4</code>, etc.). You can also choose another folder with Android's picker. The recording notification lets you stop it.</p>
+            <p>Videos saved to Downloads or a folder you choose remain in your storage after you uninstall the app; delete them from your gallery or file manager. The app does not access other files in those folders.</p>
+            <p>Do not record sensitive information or other people without their consent. You control what is captured and where it is stored.</p>
+          </section>
+
+          <section id="en-6">
+            <h2>6. Floating avatar (overlay)</h2>
+            <p>Floating mode uses the <code>SYSTEM_ALERT_WINDOW</code> permission to draw the avatar over other apps. Android takes you to a settings screen to grant it; you can revoke it at any time.</p>
+            <p>The overlay creates its own window with the avatar. It does not read, capture or modify the content of other apps, does not use accessibility services, and does not receive your touches: touches pass through the avatar.</p>
+            <p>The overlay runs as a foreground service with a persistent notification that lets you close it. Closing it releases the microphone and stops the process. While active, it may use the microphone to animate the avatar, just like the main app.</p>
+            <p>The floating avatar may remain visible over sensitive apps. Enable it only when you want and close it when you are done.</p>
+          </section>
+
+          <section id="en-7">
+            <h2>7. OBS mode and local network</h2>
+            <p>OBS mode starts a local HTTP server on port <code>8765</code> (or the next available port) to send the avatar to OBS Studio. The server listens on your device's network interfaces and uses a token in the URL to limit access.</p>
+            <p>The URL looks like <code>http://&lt;local-IP&gt;:8765/?token=...</code>. Any device on the same network that knows that URL can view the avatar stream. The stream is MJPEG with the avatar on a green background and has no audio. The app serves it to your local network and does not send it to the internet.</p>
+            <p>OBS mode does not send the stream to internet servers or to the developer. The URL uses HTTP, not HTTPS, so it is not encrypted on your network. Use a trusted Wi-Fi network, do not share the URL, and stop OBS mode when you are not using it.</p>
+            <p>The token is stored in the app's private storage (<code>user://obs_token.txt</code>). Anyone with access to the app's data or your unlocked device could read it.</p>
+            <p>OBS Studio and the computer where you run it are third-party services; their use is governed by their own policies.</p>
+          </section>
+
+          <section id="en-8">
+            <h2>8. Ads and Google AdMob</h2>
+            <p>The app shows interstitial ads (on start) and rewarded ads (to start OBS mode) through the Google Mobile Ads / AdMob SDK. If you buy <strong>Remove ads</strong>, the app stops requesting and showing ads.</p>
+            <p>Google may collect and process data such as: Android advertising ID (<code>AD_ID</code>), IP address, device and app information (model, Android version, language, screen size, network), ad interactions (impressions, clicks, views), diagnostic data, and approximate location derived from the IP address. Google may use identifiers and similar technologies to personalise ads, measure them, limit their frequency, prevent fraud and comply with legal obligations.</p>
+            <p>The developer does not receive your name, email, phone number or payment data from Google. The developer receives technical load or display events and aggregate reports. The developer does not sell personal data or create its own advertising profiles.</p>
+            <p>You can control advertising from Android: <strong>Settings &gt; Privacy &gt; Ads</strong> (reset or delete the advertising ID). You can also manage personalisation in <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Google My Ad Center</a> and read <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">how Google uses information from apps that use its services</a>.</p>
+            <p>Google acts as an independent provider. Its processing is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google's advertising information</a>. If you buy Remove ads, no new ads are loaded; data Google received before the purchase is governed by those policies.</p>
+          </section>
+
+          <section id="en-9">
+            <h2>9. In-app purchases (Google Play Billing)</h2>
+            <p>The app offers a one-time purchase to remove ads (product ID <code>remove_ads</code>). There are no subscriptions.</p>
+            <p>Google Play processes payment, taxes, billing and refunds. The app does not receive or store your card number, billing address or payment data. It receives the purchase state and a purchase token from the Google Play Billing SDK, which it uses to confirm the purchase with Google Play.</p>
+            <p>The app stores locally whether the purchase is active (<code>user://purchases.cfg</code>) so it does not show ads. If you reinstall or clear data, the app queries your Google Play purchases again and restores the entitlement if the purchase is still valid.</p>
+            <p>Refunds and cancellations are handled by Google Play. The app does not process refunds directly. See the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Google Play Terms of Service</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+            <p>Purchase history and payment data are processed by Google. The developer may see aggregate sales reports in Play Console, not your payment data.</p>
+          </section>
+
+          <section id="en-10">
+            <h2>10. Update check (GitHub)</h2>
+            <p>On startup, the app queries GitHub's public API to check for a new version: <code>https://api.github.com/repos/RickRock666/2DTuber_releases/releases/latest</code>. The request includes your IP address, a technical app identifier (<code>User-Agent: GodotUpdateChecker</code>) and the date and time. GitHub returns public information about the latest release.</p>
+            <p>The purpose is to show an update notice. No account information, images, microphone audio or recordings are sent. GitHub may log the request under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">Privacy Statement</a>.</p>
+            <p>If there is no connection, the check fails and the app keeps working. The notice may link to itch.io; opening it is governed by that site's policies.</p>
+          </section>
+
+          <section id="en-11">
+            <h2>11. Android permissions and controls</h2>
+            <p>The app only requests the permissions it needs for its features. You can review and revoke them in <strong>Settings &gt; Apps &gt; 2DTuber &gt; Permissions</strong>.</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Permission or control</th>
+                    <th>Purpose</th>
+                    <th>If you deny it</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>RECORD_AUDIO</code> (microphone)</td>
+                    <td>Animate the avatar with your voice; include audio in recordings</td>
+                    <td>The avatar does not react; recordings may have no audio</td>
+                  </tr>
+                  <tr>
+                    <td><code>SYSTEM_ALERT_WINDOW</code> (display over other apps)</td>
+                    <td>Floating avatar</td>
+                    <td>Floating mode cannot be used</td>
+                  </tr>
+                  <tr>
+                    <td><code>POST_NOTIFICATIONS</code> (notifications)</td>
+                    <td>Overlay/recording service notification and stop button</td>
+                    <td>Android 13+: you will not see those controls; the service may still run</td>
+                  </tr>
+                  <tr>
+                    <td>Screen capture (MediaProjection)</td>
+                    <td>Record the screen in Recording mode</td>
+                    <td>Nothing is recorded; you can cancel Android's prompt</td>
+                  </tr>
+                  <tr>
+                    <td>Photo/file picker</td>
+                    <td>Choose PNG images and the recordings folder</td>
+                    <td>You cannot import images or change the folder; the app still works</td>
+                  </tr>
+                  <tr>
+                    <td><code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code></td>
+                    <td>Ads, purchases, updates and local network</td>
+                    <td>Without internet there are no ads or purchases; local OBS may still work over Wi-Fi</td>
+                  </tr>
+                  <tr>
+                    <td><code>com.android.vending.BILLING</code></td>
+                    <td>“Remove ads” purchase</td>
+                    <td>You cannot purchase; the app works with ads</td>
+                  </tr>
+                  <tr>
+                    <td><code>AD_ID</code></td>
+                    <td>Advertising ID for AdMob</td>
+                    <td>Android may limit personalisation; ads still appear</td>
+                  </tr>
+                  <tr>
+                    <td><code>FOREGROUND_SERVICE</code> + <code>MICROPHONE</code>, <code>MEDIA_PROJECTION</code>, <code>SPECIAL_USE</code> types</td>
+                    <td>Keep the overlay and recording in the foreground</td>
+                    <td>Android does not allow the service; no overlay or recording</td>
+                  </tr>
+                  <tr>
+                    <td><code>WAKE_LOCK</code></td>
+                    <td>Prevent the device from suspending the service during recording or overlay</td>
+                    <td>Recording or overlay may fail in the background</td>
+                  </tr>
+                  <tr>
+                    <td><code>READ_EXTERNAL_STORAGE</code> / <code>WRITE_EXTERNAL_STORAGE</code> (Android 9 or older)</td>
+                    <td>Read and write files on older Android versions</td>
+                    <td>Modern Android uses MediaStore and the picker; older versions may fail to save</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="note">The app does not request camera, precise location, contacts, calendar, SMS, calls or access to your Google account. The ads SDK declares additional technical permissions (for example, <code>ACCESS_NETWORK_STATE</code> and <code>READ_BASIC_PHONE_STATE</code>) to serve ads and prevent fraud; they are not used to access your calls or phone number.</p>
+          </section>
+
+          <section id="en-12">
+            <h2>12. Third parties and transfers</h2>
+            <p>The app uses the following third-party services. Each processes data under its own policy:</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Third party</th>
+                    <th>Service</th>
+                    <th>Data</th>
+                    <th>Policy</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Google AdMob / Google Mobile Ads</td>
+                    <td>Ads</td>
+                    <td>Advertising ID, IP, device, interactions, diagnostics</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy</a> · <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Ads</a></td>
+                  </tr>
+                  <tr>
+                    <td>Google Play Billing</td>
+                    <td>Purchases</td>
+                    <td>Payment data and history (Google); state and token (app)</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Privacy</a> · <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener noreferrer">Terms</a></td>
+                  </tr>
+                  <tr>
+                    <td>GitHub</td>
+                    <td>Version check</td>
+                    <td>IP, user agent, date and time</td>
+                    <td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">Privacy</a></td>
+                  </tr>
+                  <tr>
+                    <td>Android / Google Play (system)</td>
+                    <td>Permissions, capture, picker, notifications</td>
+                    <td>Captured content or chosen files stay on the device</td>
+                    <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>The developer does not sell personal data. Your images, audio and videos are not sent to advertisers or to developer servers; there are no developer servers.</p>
+            <p>Some of these providers may process data outside your country. Google and GitHub apply their own international transfer mechanisms. The developer does not control those transfers.</p>
+            <p>Links to third-party sites (for example, itch.io from the update notice or an ad) open outside the app and are governed by their policies.</p>
+          </section>
+
+          <section id="en-13">
+            <h2>13. Retention and security</h2>
+            <h3>Retention</h3>
+            <ul>
+              <li>Settings, images and OBS token: until you clear the app's data or uninstall it.</li>
+              <li>Purchase status: until you clear data; it can be restored from Google Play.</li>
+              <li>Videos saved to Downloads or a chosen folder: until you delete them; they are not removed when you uninstall the app.</li>
+              <li>Ad and GitHub data: under their policies.</li>
+            </ul>
+            <h3>Security</h3>
+            <ul>
+              <li>The app does not send your images, audio or videos to developer servers.</li>
+              <li>Android isolates the app's private data; other apps cannot read it without system permissions.</li>
+              <li>Videos in Downloads and images you share may be accessible to other apps with storage access. Protect them.</li>
+              <li>OBS mode uses unencrypted HTTP on your local network; use a trusted network and stop the server when not in use.</li>
+              <li>No system is 100% secure. If you find a problem, contact us.</li>
+            </ul>
+          </section>
+
+          <section id="en-14">
+            <h2>14. Your rights and choices</h2>
+            <p>You can:</p>
+            <ul>
+              <li>Access, correct or delete local data from the app or Android Settings (clear data or uninstall).</li>
+              <li>Delete your videos from the gallery or file manager.</li>
+              <li>Reset or delete your advertising ID in Settings &gt; Privacy &gt; Ads.</li>
+              <li>Manage ad personalisation in Google My Ad Center.</li>
+              <li>Contact us with any question or request.</li>
+            </ul>
+            <p><strong>EEA, UK and Switzerland:</strong> you have rights of access, rectification, erasure, restriction, objection, portability and withdrawal of consent, and you can complain to your data protection authority. The legal basis for local processing is your consent (microphone, capture and files) and the legitimate interest in operating the app. For Google data, exercise your rights with Google; we can help direct the request.</p>
+            <p><strong>Mexico:</strong> you can exercise your access, rectification, cancellation and objection (ARCO) rights by contacting us.</p>
+            <p><strong>California:</strong> the developer does not sell personal data; Google may share data for personalised advertising under its own policy. You can request information about the categories of data processed and exercise your access, deletion and non-discrimination rights by contacting us. For Google data, use Google's tools.</p>
+            <p><strong>Brazil:</strong> you can exercise your LGPD rights by contacting us.</p>
+            <p>Because the app has no accounts, we may not be able to identify you; we will ask for the minimum information needed to handle the request.</p>
+          </section>
+
+          <section id="en-15">
+            <h2>15. Children</h2>
+            <p>2DTuber is not directed to children under 13 (or the minimum digital consent age in your country). We do not knowingly collect data from children. Ads are not configured as child-directed.</p>
+            <p>If you are a parent or guardian and believe a child used the app, contact us. You can delete local data by clearing the app's data or uninstalling it, and delete videos from the gallery.</p>
+            <p>Children should use the app with adult supervision, especially the microphone, screen capture and publishing videos.</p>
+          </section>
+
+          <section id="en-16">
+            <h2>16. Changes to this policy</h2>
+            <p>We may update this policy to reflect changes in the app or the law. We will publish the new version on this page and change the “Last updated” date.</p>
+            <p>If the change is significant, we may notify you in the app or on the Google Play listing. Continued use after publication means you accept the updated policy, to the extent permitted by law.</p>
+          </section>
+
+          <section id="en-17">
+            <h2>17. Contact</h2>
+            <p>For questions, privacy requests or complaints, email <strong>omar.alba.castillo@gmail.com</strong> with the subject “2DTuber Privacy”.</p>
+            <p>You can also open an issue in the repository: <a href="https://github.com/RickRock666/2DTuber" target="_blank" rel="noopener noreferrer">github.com/RickRock666/2DTuber</a>.</p>
+            <p>We will respond within a reasonable time. If you are in the EEA or the UK and are not satisfied, you can complain to your data protection authority.</p>
+            <div class="contact">
+              <h3>Contact details</h3>
+              <p><strong>Controller:</strong> Omar Alba</p>
+              <p><strong>Email:</strong> <a href="mailto:omar.alba.castillo@gmail.com">omar.alba.castillo@gmail.com</a></p>
+              <p><strong>Repository:</strong> <a href="https://github.com/RickRock666/2DTuber" target="_blank" rel="noopener noreferrer">github.com/RickRock666/2DTuber</a></p>
+              <p><strong>App:</strong> 2DTuber (<code>com.rickrock666.twodtuber</code>)</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p data-lang="es">© 2026 Omar Alba · 2DTuber. Esta página no usa cookies, analítica ni rastreadores. Solo guarda tu preferencia de idioma en el almacenamiento local del navegador.</p>
+      <p data-lang="en" lang="en" hidden>© 2026 Omar Alba · 2DTuber. This page uses no cookies, analytics or trackers. It only stores your language preference in your browser's local storage.</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var buttons = document.querySelectorAll("[data-lang-btn]");
+      var blocks = document.querySelectorAll("[data-lang]");
+      var titles = {
+        es: "Política de Privacidad — 2DTuber",
+        en: "Privacy Policy — 2DTuber"
+      };
+
+      function setLanguage(lang) {
+        if (!titles[lang]) return;
+        root.lang = lang;
+        document.title = titles[lang];
+
+        blocks.forEach(function (block) {
+          block.hidden = block.getAttribute("data-lang") !== lang;
+        });
+
+        buttons.forEach(function (button) {
+          button.setAttribute("aria-pressed", String(button.getAttribute("data-lang-btn") === lang));
+        });
+
+        try {
+          localStorage.setItem("2dtuber-privacy-language", lang);
+        } catch (error) {
+          /* Storage can be unavailable in private mode; the page still works. */
+        }
+      }
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLanguage(button.getAttribute("data-lang-btn"));
+        });
+      });
+
+      var saved = null;
+      try {
+        saved = localStorage.getItem("2dtuber-privacy-language");
+      } catch (error) {
+        saved = null;
+      }
+
+      if (saved === "en") {
+        setLanguage("en");
+      }
+    })();
+  </script>
+</body>
+</html>
